@@ -79,7 +79,7 @@ public class BankingAppController {
 	
 	@GetMapping(value = "/getBankData/{bankName}")
 	public void getBankData(@PathVariable String bankName) {
-		
+		//requirement not clear for this method
 	}
 	
 	/**
@@ -100,11 +100,6 @@ public class BankingAppController {
 	@GetMapping(value = "/getTransactionData/{accountNumber}")
 	public TransactionEntity getTransactionData(@PathVariable int accountNumber) throws BankingException {
 		return bankingService.getAllTransactions(allAccountsList, accountNumber);
-	}
-	
-	@GetMapping(value = "/loggedinusername")
-	public String getTransactionData() {
-		return loggedinUsername;
 	}
 	
 	public BankingDAOImpl getBankingService() {
